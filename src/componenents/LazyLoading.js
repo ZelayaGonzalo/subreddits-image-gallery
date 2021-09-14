@@ -7,7 +7,6 @@ function LazyLoading(props){
     const [loaded, setLoaded] = useState(false);
     useEffect(() => {
         if (inViewport && !loaded) {
-          console.log('Load More!!!!!')
           props.next()
         }
       }, [inViewport, loaded]);

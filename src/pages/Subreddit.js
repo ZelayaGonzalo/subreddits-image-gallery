@@ -23,7 +23,6 @@ export default function Subreddit(){
         const newList = await getData(sub,show,time)
         setList(newList)}
         catch(err){
-          console.log('error',err)
         }
       }
       asignData()
@@ -32,13 +31,11 @@ export default function Subreddit(){
 
   async function getNext(){
     if(!list || list.length <=0){
-      console.log(list)
       return
     }
     const nextItems = await nextBatch(list,sub,show,time)
     await setList(prev=>{
       const newList= prev.concat(nextItems)
-      console.log('full list',newList)
       return newList
     })
     
@@ -87,8 +84,8 @@ export default function Subreddit(){
       const r = new snoowrap({
       userAgent: 'web:image gallery:v0.1 (by /u/0pt1c0)',
       clientId: 'a9yCMNR-nzCR1QtHzv0JOA',
-      clientSecret: 'HRMr674TXgpjnqtUSSRX1ErQ_AioAA',
-      refreshToken: '44919193-aan_aIvTODzVdy29kfE5RJ3u6x8pDQ'
+      clientSecret: process.env.CLIENT_SECRET,
+      refreshToken: process.env.REFRESH_TOKEN,
     });
     switch(show){
       case 'Hot':
@@ -116,8 +113,8 @@ export default function Subreddit(){
     const r = new snoowrap({
       userAgent: 'web:image gallery:v0.1 (by /u/0pt1c0)',
       clientId: 'a9yCMNR-nzCR1QtHzv0JOA',
-      clientSecret: 'HRMr674TXgpjnqtUSSRX1ErQ_AioAA',
-      refreshToken: '44919193-aan_aIvTODzVdy29kfE5RJ3u6x8pDQ'
+      clientSecret: process.env.CLIENT_SECRET,
+      refreshToken: process.env.REFRESH_TOKEN,
     });
     switch(show){
       case 'Hot':
