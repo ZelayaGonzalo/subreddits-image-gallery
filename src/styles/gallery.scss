@@ -1,0 +1,106 @@
+.page-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.gallery-container{
+    width: 100%;
+    display: flex;
+    min-height: 700px;
+    position: relative;
+    max-width: 1400px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.image-column{
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    .image-container{
+        position: relative;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover .image-info,.image-options{
+            visibility: visible;
+            font-size: 14px;
+            height: auto;
+        }
+        &:hover .image-options{
+            visibility: visible;
+        }
+        .image-info{
+            visibility: hidden;
+            border-radius: 0 0 10px 10px;
+            color: white;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,0.30) 0%, rgba(0,0,0,0.8) 100%);
+            max-height: 80%;
+            overflow: hidden;
+            font-size: 14px;
+            padding: 10px 0;
+            background-color:#1a1a1b;
+            transition: 0.3s;
+            font-size: 0;
+            height: 0;
+            .title{
+                font-weight: bold;
+                text-align: center;
+                color: white;
+                text-decoration: none;
+                display: block;
+                &:hover{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+        .image-options{
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            color: #1a1a1b;
+            div{
+                cursor: pointer;
+            }
+            i{
+                padding: 5px 20px;
+                font-size: 20px;
+            }
+        }
+    }
+    img{
+        width: 100%;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery-container{
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+}
+
+
+.load-more{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    background-color: red;
+    visibility: hidden;
+    opacity: 0;
+}
