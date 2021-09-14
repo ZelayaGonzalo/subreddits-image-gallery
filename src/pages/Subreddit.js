@@ -25,7 +25,7 @@ export default function Subreddit(){
       }
       asignData()
     }
-  },[list])
+  },[list,show,sub,time])
 
   async function getNext(){
     if(!list || list.length <=0){

@@ -22,7 +22,7 @@ export default function Gallery(props){
         }
         setList(props.data)
         setRows(addToList(props.data,[],nRows))
-    },[props.data,size])
+    },[props.data,size,nRows])
 
     return(
         <div className='gallery-container'>
@@ -88,12 +88,3 @@ function useWindowSize() {
   
     return windowSize;
   }
-
-function removeSource(string){
-    return string.replace(/ *\[[^)]*\] */g, "");
-}
-function getSource(string){
-    const init = string.indexOf('[');
-    const fin = string.indexOf(']');
-    return string.substring(init + 1, fin)
-}

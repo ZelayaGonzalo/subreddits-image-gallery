@@ -1,15 +1,14 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useEffect } from 'react';
 import {handleViewport} from 'react-in-viewport';
 
 
 function LazyLoading(props){
     const { inViewport, forwardedRef } = props;
-    const [loaded, setLoaded] = useState(false);
     useEffect(() => {
-        if (inViewport && !loaded) {
+        if (inViewport) {
           props.next()
         }
-      }, [inViewport, loaded]);
+      }, [inViewport,props]);
     return(
         <div className='load-more' ref={forwardedRef}>
             asd

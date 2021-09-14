@@ -6,7 +6,7 @@ export default function Image(props){
     }
     return(
     <div className='image-container' key={props.post.id}>
-        <img src={props.post.url}></img>
+        <img src={props.post.url} alt={props.post.title}></img>
         <div className='image-info'>
             <a href={`https://reddit.com${props.post.permalink}`} target='_blank' rel="noopener noreferrer" className='title'>{removeSource(props.post.title)}</a>
             <p>{getSource(props.post.title)}</p>
