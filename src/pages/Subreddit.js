@@ -3,7 +3,6 @@ import snoowrap from 'snoowrap';
 import Gallery from '../componenents/Gallery';
 import NavBar from '../componenents/Navbar';
 import { useLocation } from 'react-router-dom';
-import Sorting from '../componenents/Sorting';
 
 export default function Subreddit(){
   const location = useLocation();
@@ -14,7 +13,6 @@ export default function Subreddit(){
   const[showTop, setShowTop] = useState(false)
 
   const [list, setList] = useState([])
-  const [rows, setRows] = useState([])
 
   useEffect(()=>{
     if(list.length === 0){
