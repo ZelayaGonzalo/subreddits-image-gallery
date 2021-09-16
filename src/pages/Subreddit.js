@@ -82,8 +82,8 @@ export default function Subreddit(){
       const r = new snoowrap({
       userAgent: 'web:image gallery:v0.1 (by /u/0pt1c0)',
       clientId: 'a9yCMNR-nzCR1QtHzv0JOA',
-      clientSecret: process.env.CLIENT_SECRET,
-      refreshToken: process.env.REFRESH_TOKEN,
+      clientSecret: process.env.REACT_APP_CLIENT_SECRET,
+      refreshToken: process.env.REACT_APP_REFRESH_TOKEN,
     });
     switch(show){
       case 'Hot':
@@ -111,8 +111,8 @@ export default function Subreddit(){
     const r = new snoowrap({
       userAgent: 'web:image gallery:v0.1 (by /u/0pt1c0)',
       clientId: 'a9yCMNR-nzCR1QtHzv0JOA',
-      clientSecret: process.env.CLIENT_SECRET,
-      refreshToken: process.env.REFRESH_TOKEN,
+      clientSecret: process.env.REACT_APP_CLIENT_SECRET,
+      refreshToken: process.env.REACT_APP_REFRESH_TOKEN,
     });
     switch(show){
       case 'Hot':

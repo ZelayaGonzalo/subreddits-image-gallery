@@ -13,7 +13,7 @@ export default function Image(props){
         </div>
         <div className='image-options'>
             <div onClick={saveImage} >
-                <i class="fas fa-arrow-alt-circle-down"></i>
+                <i className="fas fa-arrow-alt-circle-down"></i>
             </div>
         </div>
     </div>
