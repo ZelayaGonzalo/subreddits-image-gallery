@@ -3,6 +3,7 @@ import snoowrap from 'snoowrap';
 import Gallery from '../componenents/Gallery';
 import NavBar from '../componenents/Navbar';
 import { useLocation } from 'react-router-dom';
+import '../styles/sorting.scss'
 
 export default function Subreddit(){
   const location = useLocation();
